@@ -2,6 +2,7 @@
 #include "bec_cu_led.h"
 #include "bec_cu_neon.h"
 #include "student.h"
+#include "bec_smart.h"
 
 
 class Empty {
@@ -118,9 +119,11 @@ void h(baza b) {
 int main() {
     bec_cu_led bl1;
     bec_cu_neon bn1;
+    bec_smart bs1;
     student st1;
     st1.verifica(bl1);
     st1.verifica(bn1);
+    st1.verifica(bs1);
 
 
     return 0;
