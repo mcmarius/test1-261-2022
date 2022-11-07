@@ -11,7 +11,7 @@
 
 class bec_cu_led : public bec {
     std::string culoare = "albastru";
-    int nr_folosiri;
+    int nr_folosiri = 0;
 public:
     bec_cu_led(std::string x, int z);
 

@@ -4,7 +4,7 @@
 #include "student.h"
 #include "bec_smart.h"
 
-
+/*
 class Empty {
 };
 
@@ -115,6 +115,7 @@ void g2(baza *b) {
 void h(baza b) {
     b.f();
 }
+*/
 
 int main() {
     bec_cu_led bl1;
@@ -127,6 +128,8 @@ int main() {
 
 
     return 0;
+
+/*
     baza b;
     derivata d;
 //    d.baza::f();
@@ -179,4 +182,5 @@ int main() {
     (x = y)++;
     std::cout << "x este " << x << ", y este " << y << "\n";
     return 0;
+    */
 }
