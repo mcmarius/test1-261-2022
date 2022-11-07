@@ -10,5 +10,5 @@ bec_cu_led::bec_cu_led(std::string x, int z) : bec(), culoare(x),
 void bec_cu_led::aprinde() {
     ++nr_folosiri;
     std::cout << "se aprinde cu culoarea "
-              << culoare (" << nr_folosiri << ")\n";
+              << culoare << " (" << nr_folosiri << ")\n";
 }
