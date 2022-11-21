@@ -21,6 +21,9 @@ public:
     using bec::bec;
 
     void aprinde() override;
+
+protected:
+    void afis(std::ostream &os) const override;
 };
 
 

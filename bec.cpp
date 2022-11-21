@@ -31,6 +31,7 @@ std::ostream &operator<<(std::ostream &os, const bec &bec) {
     os << "putere: " << bec.putere
        << " intensitate: " << bec.intensitate
        << " marca: " << bec.marca << "\n";
+    bec.afis(os);
     return os;
 }
 
@@ -41,3 +42,5 @@ const std::string &bec::getMarca() const {
 int bec::getIntensitate() const {
     return intensitate;
 }
+
+void bec::afis(std::ostream &) const {}

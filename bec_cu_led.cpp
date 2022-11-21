@@ -11,6 +11,10 @@ bec_cu_led::bec_cu_led(const std::string &cul, int nr) : bec(), culoare(cul),
         throw eroare_putere("o sa se arda");
 }
 
+void bec_cu_led::afis(std::ostream &os) const {
+    os << "\t\tbec cu led: " << culoare << " " << nr_folosiri << "\n";
+}
+
 void bec_cu_led::aprinde() {
     ++nr_folosiri;
     std::cout << "se aprinde cu culoarea "

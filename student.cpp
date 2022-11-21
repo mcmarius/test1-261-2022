@@ -18,6 +18,11 @@ void student::verifica(bec &bec_) {
         throw eroare_lipsa_chef("prea greu");
 }
 
-student::student() : id(id_max) {
-    id_max++;
+
+std::ostream &operator<<(std::ostream &os, const student &student) {
+    os << "nr_becuri_aprinse: " << student.nr_becuri_aprinse << " xp: " << student.xp << " id: " << student.id
+       << " becuri: ";
+    for (const auto &bec: student.becuri)
+        os << *bec << "\n";
+    return os;
 }

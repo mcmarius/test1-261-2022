@@ -13,6 +13,7 @@ class bec {
 protected:
     int putere = 50;
 private:
+    virtual void afis(std::ostream &os) const;
     int intensitate = 80;
     std::string marca = "n/a";
 public:

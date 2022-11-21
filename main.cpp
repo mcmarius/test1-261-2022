@@ -150,7 +150,8 @@ int main() {
     bec_cu_led bl1{};
     bec_cu_neon bn1;
     bec_smart bs1;
-    student st1;
+    student st1{{bl1.clone(), bs1.clone(), bn1.clone()}};
+
 //    st1.verifica(bl1);
 //    st1.verifica(bn1);
 //    st1.verifica(bs1);
@@ -159,7 +160,8 @@ int main() {
 //    ceva(bl1);
 
     try {
-        bec_cu_led bl2{"portocaliu", 40};
+        std::cout << st1;
+        bec_cu_led bl2{"portocaliu", 90};
         st1.verifica(bl2);
         ceva(bl1);
         ceva(bl2);
@@ -169,7 +171,7 @@ int main() {
         std::cout << err.what() << "\n";
     }
 
-    student st2;
+    student st2{{}};
     st2 = st1;
     return 0;
 
