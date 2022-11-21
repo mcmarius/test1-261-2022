@@ -145,6 +145,7 @@ void ceva(bec &b) {
 
 
 int main() {
+    using namespace std::string_literals;
 //    int x123;
 //    std::cin >> x123;
 //    std::cout << "am citit " << x123 << "\n";
@@ -153,7 +154,7 @@ int main() {
     bec_smart bs1;
     auto vec = {bl1.clone(), bs1.clone(), bn1.clone()};
     student st1{vec};
-    for(auto& elem : vec)
+    for(const auto& elem : vec)
         delete elem;
 
 //    st1.verifica(bl1);
@@ -165,7 +166,7 @@ int main() {
 
     try {
         std::cout << st1;
-        bec_cu_led bl2{"portocaliu", 90};
+        bec_cu_led bl2{"portocaliu"s, 90};
         st1.verifica(bl2);
         ceva(bl1);
         ceva(bl2);
