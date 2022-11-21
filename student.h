@@ -19,7 +19,7 @@ class student {
 public:
     void verifica(bec &bec_);
 
-    explicit student(const std::vector<bec *> becuri_) : id(id_max) {
+    explicit student(const std::vector<bec *>& becuri_) : id(id_max) {
         id_max++;
         for (const auto &bec: becuri_)
             becuri.push_back(bec->clone());

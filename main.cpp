@@ -132,6 +132,7 @@ void ceva(bec &b) {
         throw eroare_defect_fabrica("hopa...");
     std::cout << "adr copie: " << copie << "\n";
     copie->aprinde();
+    delete copie;
 }
 
 //bec* copie(bec& other) {
@@ -150,7 +151,10 @@ int main() {
     bec_cu_led bl1{};
     bec_cu_neon bn1;
     bec_smart bs1;
-    student st1{{bl1.clone(), bs1.clone(), bn1.clone()}};
+    auto vec = {bl1.clone(), bs1.clone(), bn1.clone()};
+    student st1{vec};
+    for(auto& elem : vec)
+        delete elem;
 
 //    st1.verifica(bl1);
 //    st1.verifica(bn1);
