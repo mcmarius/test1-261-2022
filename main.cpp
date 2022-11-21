@@ -3,6 +3,11 @@
 #include "bec_cu_neon.h"
 #include "student.h"
 #include "bec_smart.h"
+#include "exceptii.h"
+
+//void f(student& st) {
+//    st.xp
+//}
 
 /*
 class Empty {
@@ -123,6 +128,8 @@ void ceva(bec &b) {
     auto *copie = b.clone();
     std::cout << "adr b: " << &b << "\n";
     b.aprinde();
+    if (b.getMarca() == "benq" || b.getIntensitate() > 44)
+        throw eroare_defect_fabrica("hopa...");
     std::cout << "adr copie: " << copie << "\n";
     copie->aprinde();
 }
@@ -137,9 +144,9 @@ void ceva(bec &b) {
 
 
 int main() {
-    int x123;
-    std::cin >> x123;
-    std::cout << "am citit " << x123 << "\n";
+//    int x123;
+//    std::cin >> x123;
+//    std::cout << "am citit " << x123 << "\n";
     bec_cu_led bl1{};
     bec_cu_neon bn1;
     bec_smart bs1;
@@ -149,9 +156,21 @@ int main() {
 //    st1.verifica(bs1);
 //    bec b1;
 //    ceva(b1);
-    ceva(bl1);
+//    ceva(bl1);
 
+    try {
+        bec_cu_led bl2{"portocaliu", 40};
+        st1.verifica(bl2);
+        ceva(bl1);
+        ceva(bl2);
+    } catch (eroare_lipsa_chef &err) {
+        std::cout << "daca nici voi nu mai aveti chef..." << err.what() << "\n";
+    } catch (eroare_aplicatie &err) {
+        std::cout << err.what() << "\n";
+    }
 
+    student st2;
+    st2 = st1;
     return 0;
 
 /*

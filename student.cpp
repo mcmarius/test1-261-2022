@@ -3,6 +3,9 @@
 //
 
 #include "student.h"
+#include "exceptii.h"
+
+int student::id_max = 1;
 
 void student::verifica(bec &bec_) {
     bec_.aprinde();
@@ -11,4 +14,10 @@ void student::verifica(bec &bec_) {
     nr_becuri_aprinse += 3;
     if (nr_becuri_aprinse % 10 == 0)
         xp++;
+    if (xp % 5 == 3 || nr_becuri_aprinse > 4)
+        throw eroare_lipsa_chef("prea greu");
+}
+
+student::student() : id(id_max) {
+    id_max++;
 }

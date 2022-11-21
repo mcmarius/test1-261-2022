@@ -10,7 +10,9 @@
 #include <iostream>
 
 class bec {
+protected:
     int putere = 50;
+private:
     int intensitate = 80;
     std::string marca = "n/a";
 public:
@@ -29,6 +31,10 @@ public:
     }
 
     virtual bec *clone() = 0;
+
+    const std::string &getMarca() const;
+
+    int getIntensitate() const;
 
 protected:
     bec(const bec &other);

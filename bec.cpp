@@ -33,3 +33,11 @@ std::ostream &operator<<(std::ostream &os, const bec &bec) {
        << " marca: " << bec.marca << "\n";
     return os;
 }
+
+const std::string &bec::getMarca() const {
+    return marca;
+}
+
+int bec::getIntensitate() const {
+    return intensitate;
+}
