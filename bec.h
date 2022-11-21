@@ -20,15 +20,20 @@ public:
 
     bec(int putere, int intensitate, const std::string &marca);
 
-    bec(const bec &other);
-
-    bec &operator=(const bec &other);
-
-    ~bec();
+    virtual ~bec();
 
     friend std::ostream &operator<<(std::ostream &os, const bec &bec);
 
-    virtual void aprinde() = 0;
+    virtual void aprinde() {
+        std::cout << "se aprinde așa și așa\n";
+    }
+
+    virtual bec *clone() = 0;
+
+protected:
+    bec(const bec &other);
+
+    bec &operator=(const bec &other);
 };
 
 

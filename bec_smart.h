@@ -10,6 +10,9 @@
 
 class bec_smart : public bec {
 public:
+    bec *clone() override;
+
+public:
     void aprinde() override;
 };
 

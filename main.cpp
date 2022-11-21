@@ -117,14 +117,39 @@ void h(baza b) {
 }
 */
 
+void ceva(bec &b) {
+//    std::cout << "în funcția ceva\n";
+//    b.aprinde();
+    auto *copie = b.clone();
+    std::cout << "adr b: " << &b << "\n";
+    b.aprinde();
+    std::cout << "adr copie: " << copie << "\n";
+    copie->aprinde();
+}
+
+//bec* copie(bec& other) {
+//    if(other.get_tip() == "cu led")
+//        return new bec_cu_led(???);
+//    else if(other.get_tip() == "cu neon")
+//        return new bec_cu_neon(???);
+//    /// etc
+//}
+
+
 int main() {
-    bec_cu_led bl1;
+    int x123;
+    std::cin >> x123;
+    std::cout << "am citit " << x123 << "\n";
+    bec_cu_led bl1{};
     bec_cu_neon bn1;
     bec_smart bs1;
     student st1;
-    st1.verifica(bl1);
-    st1.verifica(bn1);
-    st1.verifica(bs1);
+//    st1.verifica(bl1);
+//    st1.verifica(bn1);
+//    st1.verifica(bs1);
+//    bec b1;
+//    ceva(b1);
+    ceva(bl1);
 
 
     return 0;

@@ -7,3 +7,7 @@
 void bec_cu_neon::aprinde() {
     std::cout << "flicare la inceput si apoi merge\n";
 }
+
+bec *bec_cu_neon::clone() {
+    return new bec_cu_neon(*this);
+}

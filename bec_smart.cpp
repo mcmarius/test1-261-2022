@@ -7,3 +7,7 @@
 void bec_smart::aprinde() {
     std::cout << "Alexa™ is offline\n";
 }
+
+bec *bec_smart::clone() {
+    return new bec_smart(*this);
+}

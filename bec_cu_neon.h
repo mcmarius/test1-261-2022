@@ -12,6 +12,8 @@
 class bec_cu_neon : public bec {
 public:
     void aprinde() override;
+
+    bec *clone() override;
 };
 
 
