@@ -183,6 +183,7 @@ int main() {
 
     student st2{{}};
     st2 = st1;
+    std::cout << st2;
     return 0;
 
 /*
