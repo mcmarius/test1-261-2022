@@ -4,6 +4,7 @@
 #include "student.h"
 #include "bec_smart.h"
 #include "exceptii.h"
+#include "bec_smart_cu_neon.h"
 
 //void f(student& st) {
 //    st.xp
@@ -154,9 +155,13 @@ int main() {
     bec_smart bs1;
     auto vec = {bl1.clone(), bs1.clone(), bn1.clone()};
     student st1{vec};
-    for(const auto& elem : vec)
+    for (const auto &elem: vec)
         delete elem;
 
+    std::cout << "-------------------\n";
+    bec_smart_cu_neon becSmartCuNeon;
+    becSmartCuNeon.aprinde();
+    std::cout << "-------------------\n";
 //    st1.verifica(bl1);
 //    st1.verifica(bn1);
 //    st1.verifica(bs1);

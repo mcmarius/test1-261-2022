@@ -13,14 +13,14 @@ class bec_cu_led : public bec {
     std::string culoare = "albastru";
     int nr_folosiri = 0;
 
+    void aprinde_der() override;
 public:
+
     bec_cu_led(const std::string &cul, int nr);
 
     bec *clone() override;
 
     using bec::bec;
-
-    void aprinde() override;
 
 protected:
     void afis(std::ostream &os) const override;

@@ -12,10 +12,15 @@
 class bec {
 protected:
     int putere = 50;
+
+    virtual void aprinde_der();
+
 private:
-    virtual void afis(std::ostream &os) const;
     int intensitate = 80;
     std::string marca = "n/a";
+
+    virtual void afis(std::ostream &os) const;
+
 public:
     bec() = default;
 
@@ -27,8 +32,9 @@ public:
 
     friend std::ostream &operator<<(std::ostream &os, const bec &bec);
 
-    virtual void aprinde() {
+    void aprinde() {
         std::cout << "se aprinde așa și așa\n";
+        aprinde_der();
     }
 
     virtual bec *clone() = 0;

@@ -8,12 +8,12 @@
 
 #include "bec.h"
 
-class bec_smart : public bec {
+class bec_smart : public virtual bec {
 public:
     bec *clone() override;
 
-public:
-    void aprinde() override;
+protected:
+    void aprinde_der() override;
 };
 
 

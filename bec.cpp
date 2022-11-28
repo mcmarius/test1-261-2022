@@ -44,3 +44,5 @@ int bec::getIntensitate() const {
 }
 
 void bec::afis(std::ostream &) const {}
+
+void bec::aprinde_der() {}
