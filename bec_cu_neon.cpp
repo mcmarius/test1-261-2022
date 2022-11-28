@@ -4,7 +4,7 @@
 
 #include "bec_cu_neon.h"
 
-void bec_cu_neon::aprinde_der() {
+void bec_cu_neon::aprinde_() {
     std::cout << "flicare la inceput si apoi merge\n";
 }
 

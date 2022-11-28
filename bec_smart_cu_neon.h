@@ -11,9 +11,9 @@
 
 class bec_smart_cu_neon : public bec_cu_neon, public bec_smart {
 protected:
-    void aprinde_der() override {
-        bec_cu_neon::aprinde_der();
-        bec_smart::aprinde_der();
+    void aprinde_() override {
+        bec_cu_neon::aprinde_();
+        bec_smart::aprinde_();
     }
 
 public:

@@ -4,7 +4,7 @@
 
 #include "bec_smart.h"
 
-void bec_smart::aprinde_der() {
+void bec_smart::aprinde_() {
     std::cout << "Alexa™ is offline\n";
 }
 

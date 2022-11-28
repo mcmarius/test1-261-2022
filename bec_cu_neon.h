@@ -11,7 +11,7 @@
 
 class bec_cu_neon : public virtual bec {
 protected:
-    void aprinde_der() override;
+    void aprinde_() override;
 
 public:
 

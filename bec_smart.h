@@ -13,7 +13,7 @@ public:
     std::shared_ptr<bec> clone() const override;
 
 protected:
-    void aprinde_der() override;
+    void aprinde_() override;
 };
 
 

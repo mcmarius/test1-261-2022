@@ -15,7 +15,7 @@ void bec_cu_led::afis(std::ostream &os) const {
     os << "\t\tbec cu led: " << culoare << " " << nr_folosiri << "\n";
 }
 
-void bec_cu_led::aprinde_der() {
+void bec_cu_led::aprinde_() {
     ++nr_folosiri;
     std::cout << "se aprinde cu culoarea "
               << culoare << " (" << nr_folosiri << ")\n";

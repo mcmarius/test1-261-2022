@@ -14,7 +14,11 @@ class bec {
 protected:
     int putere = 50;
 
-    virtual void aprinde_der();
+    virtual void aprinde_();
+
+    bec(const bec &other);
+
+    bec &operator=(const bec &other);
 
 private:
     int intensitate = 80;
@@ -35,7 +39,7 @@ public:
 
     void aprinde() {
         std::cout << "se aprinde așa și așa\n";
-        aprinde_der();
+        aprinde_();
     }
 
     [[nodiscard]] virtual std::shared_ptr<bec> clone() const = 0;
@@ -43,11 +47,6 @@ public:
     const std::string &getMarca() const;
 
     int getIntensitate() const;
-
-protected:
-    bec(const bec &other);
-
-    bec &operator=(const bec &other);
 };
 
 
