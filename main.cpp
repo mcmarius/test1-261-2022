@@ -5,6 +5,7 @@
 #include "bec_smart.h"
 #include "exceptii.h"
 #include "bec_smart_cu_neon.h"
+#include "bec_incandescent.h"
 
 //void f(student& st) {
 //    st.xp
@@ -152,7 +153,8 @@ int main() {
     bec_cu_led bl1{};
     bec_cu_neon bn1;
     bec_smart bs1;
-    auto vec = {bl1.clone(), bs1.clone(), bn1.clone()};
+    bec_incandescent bi1{111, 222, "ceva pe acolo"};
+    auto vec = {bl1.clone(), bs1.clone(), bn1.clone(), bi1.clone()};
     student st1{vec};
     st1.verifica(bl1);
 

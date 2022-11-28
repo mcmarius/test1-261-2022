@@ -41,7 +41,7 @@ endif()
 ###############################################################################
 
 # NOTE: update executable name in .github/workflows/cmake.yml when changing name here
-add_executable(${PROJECT_NAME} main.cpp bec.cpp bec.h bec_cu_led.cpp bec_cu_led.h bec_cu_neon.cpp bec_cu_neon.h student.cpp student.h bec_smart.cpp bec_smart.h exceptii.cpp exceptii.h bec_smart_cu_neon.cpp bec_smart_cu_neon.h)
+add_executable(${PROJECT_NAME} main.cpp bec.cpp bec.h bec_cu_led.cpp bec_cu_led.h bec_cu_neon.cpp bec_cu_neon.h student.cpp student.h bec_smart.cpp bec_smart.h exceptii.cpp exceptii.h bec_smart_cu_neon.cpp bec_smart_cu_neon.h bec_incandescent.cpp bec_incandescent.h)
 
 ###############################################################################
 
