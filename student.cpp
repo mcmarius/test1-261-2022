@@ -8,6 +8,8 @@
 int student::id_max = 1;
 
 void student::verifica(bec &bec_) {
+    for (auto &bec: becuri)
+        bec->aprinde();
     bec_.aprinde();
     bec_.aprinde();
     bec_.aprinde();

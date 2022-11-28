@@ -154,6 +154,7 @@ int main() {
     bec_smart bs1;
     auto vec = {bl1.clone(), bs1.clone(), bn1.clone()};
     student st1{vec};
+    st1.verifica(bl1);
 
     std::cout << "-------------------\n";
     bec_smart_cu_neon becSmartCuNeon;
