@@ -126,14 +126,13 @@ void h(baza b) {
 void ceva(bec &b) {
 //    std::cout << "în funcția ceva\n";
 //    b.aprinde();
-    auto *copie = b.clone();
+    auto copie = b.clone();
     std::cout << "adr b: " << &b << "\n";
     b.aprinde();
     if (b.getMarca() == "benq" || b.getIntensitate() > 44)
         throw eroare_defect_fabrica("hopa...");
     std::cout << "adr copie: " << copie << "\n";
     copie->aprinde();
-    delete copie;
 }
 
 //bec* copie(bec& other) {
@@ -155,8 +154,6 @@ int main() {
     bec_smart bs1;
     auto vec = {bl1.clone(), bs1.clone(), bn1.clone()};
     student st1{vec};
-    for (const auto &elem: vec)
-        delete elem;
 
     std::cout << "-------------------\n";
     bec_smart_cu_neon becSmartCuNeon;

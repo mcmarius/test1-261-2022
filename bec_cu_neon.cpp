@@ -8,6 +8,6 @@ void bec_cu_neon::aprinde_der() {
     std::cout << "flicare la inceput si apoi merge\n";
 }
 
-bec *bec_cu_neon::clone() {
-    return new bec_cu_neon(*this);
+std::shared_ptr<bec> bec_cu_neon::clone() const {
+    return std::make_shared<bec_cu_neon>(*this);
 }

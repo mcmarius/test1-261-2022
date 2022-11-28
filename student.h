@@ -8,6 +8,7 @@
 
 #include <vector>
 #include <ostream>
+#include <memory>
 #include "bec.h"
 
 class student {
@@ -15,19 +16,14 @@ class student {
     int xp = 1;
     const int id;
     static int id_max;
-    std::vector<bec *> becuri;
+    std::vector<std::shared_ptr<bec>> becuri;
 public:
     void verifica(bec &bec_);
 
-    explicit student(const std::vector<bec *>& becuri_) : id(id_max) {
+    explicit student(const std::vector<std::shared_ptr<bec>> &becuri_) : id(id_max) {
         id_max++;
         for (const auto &bec: becuri_)
             becuri.push_back(bec->clone());
-    }
-
-    ~student() {
-        for (auto &bec: becuri)
-            delete bec;
     }
 
     student(const student &other) : nr_becuri_aprinse(other.nr_becuri_aprinse), xp(other.xp),

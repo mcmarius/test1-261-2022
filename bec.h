@@ -8,6 +8,7 @@
 
 #include <string>
 #include <iostream>
+#include <memory>
 
 class bec {
 protected:
@@ -37,7 +38,7 @@ public:
         aprinde_der();
     }
 
-    virtual bec *clone() = 0;
+    [[nodiscard]] virtual std::shared_ptr<bec> clone() const = 0;
 
     const std::string &getMarca() const;
 

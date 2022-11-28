@@ -8,6 +8,6 @@ void bec_smart::aprinde_der() {
     std::cout << "Alexa™ is offline\n";
 }
 
-bec *bec_smart::clone() {
-    return new bec_smart(*this);
+std::shared_ptr<bec> bec_smart::clone() const {
+    return std::make_shared<bec_smart>(*this);
 }

@@ -21,6 +21,6 @@ void bec_cu_led::aprinde_der() {
               << culoare << " (" << nr_folosiri << ")\n";
 }
 
-bec *bec_cu_led::clone() {
-    return new bec_cu_led(*this);
+std::shared_ptr<bec> bec_cu_led::clone() const {
+    return std::make_shared<bec_cu_led>(*this);
 }

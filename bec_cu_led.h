@@ -18,7 +18,7 @@ public:
 
     bec_cu_led(const std::string &cul, int nr);
 
-    bec *clone() override;
+    [[nodiscard]] std::shared_ptr<bec> clone() const override;
 
     using bec::bec;
 

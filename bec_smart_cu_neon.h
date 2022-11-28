@@ -22,8 +22,8 @@ public:
     }
 
 
-    bec *clone() override {
-        return new bec_smart_cu_neon(*this);
+    [[nodiscard]] std::shared_ptr<bec> clone() const override {
+        return std::make_shared<bec_smart_cu_neon>(*this);
     }
 };
 

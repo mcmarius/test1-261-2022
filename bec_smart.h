@@ -10,7 +10,7 @@
 
 class bec_smart : public virtual bec {
 public:
-    bec *clone() override;
+    std::shared_ptr<bec> clone() const override;
 
 protected:
     void aprinde_der() override;
